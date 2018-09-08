@@ -19,22 +19,24 @@ function displayFighterInfo() {
 	var fightDiv = $("<div class='gif'>");
 
 	// Retrieving the URL for the image
-	var imgURL = response.data[0].images.fixed_height.url;
+	for (var i = 0; i < response.data.length; i++) {
+	var imgURL = response.data[i].images.fixed_height.url;
 
 	console.log(imgURL)
 
 	// holding the image
 	var image = $("<img>").attr("src", imgURL);
-
+	
 	// Appending the image
 	fightDiv.append(image);
 
 
 	// putting new fight on top
 	$("#gif-view").prepend(fightDiv);
-  });
-
+	}	
+});
 }
+
 function renderButtons() {
 
   // Deleting the fighter prior to adding 
