@@ -1,5 +1,5 @@
 
-var topics = ["Mike Tyson", "larry holmes","gennady golovkin","canelo alvarez","manny pacquiao", "miguel cotto", "oscar de la hoya", "shane mosley", "james toney", "roy jones jr", "bernard hopkins", "lennox lewis", "evander holyfield"]
+var topics = ["Mike Tyson", "larry holmes","gennady golovkin","canelo alvarez","manny pacquiao", "miguel cotto", "oscar de la hoya", "shane mosley", "james toney", "roy jones jr", "lennox lewis", "evander holyfield"]
 
 //function 
 function displayFighterInfo() {
@@ -20,12 +20,13 @@ function displayFighterInfo() {
 
 	// Retrieving the URL for the image
 	for (var i = 0; i < response.data.length; i++) {
-	var imgURL = response.data[i].images.fixed_height.url;
+	var imgURL = response.data[i].images.fixed_height_small.url;
 
 	console.log(imgURL)
 
 	// holding the image
 	var image = $("<img>").attr("src", imgURL);
+
 	
 	// Appending the image
 	fightDiv.append(image);
@@ -36,6 +37,7 @@ function displayFighterInfo() {
 	}	
 });
 }
+
 
 function renderButtons() {
 
