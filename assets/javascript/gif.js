@@ -17,11 +17,11 @@ function displayFighterInfo() {
 		
 	// Creating a div to hold the fighter
 	var fightDiv = $("<div class='gif'>");
+	
 
 	// Retrieving the URL for the image
 	for (var i = 0; i < response.data.length; i++) {
 	var imgURL = response.data[i].images.fixed_height_small.url;
-
 	console.log(imgURL)
 
 	// holding the image
@@ -38,6 +38,7 @@ function displayFighterInfo() {
 });
 }
 
+//// strugled with 
 
 function renderButtons() {
 
